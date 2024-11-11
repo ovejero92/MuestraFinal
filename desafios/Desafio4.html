@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    function sumarProductos(precioUnitario, cantidadDeseada) {
+    // Calcular el total gastado en un producto multiplicando el precio por la cantidad comprada
+    let totalGastado = precioUnitario * cantidadDeseada;
+    return totalGastado;
+    }
+
+    // Ejemplo de uso de la función
+    let precio = 10; // Precio unitario del producto
+    let cantidad = 3; // Cantidad deseada del producto
+    let totalCompra = sumarProductos(precio, cantidad);
+
+    console.log("El total gastado en el producto es: $" + totalCompra);
+    </script>
+</body>
+</html>

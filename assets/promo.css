@@ -1,0 +1,50 @@
+body{
+    background-color: grey;
+}
+.banner{
+    margin-top: 70px;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.banner .product{
+    /* background-color: red; */
+    width: 500px;
+    height: 420px;
+    position: absolute;
+    bottom: 170px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+    transition: 0.7s;
+    --left: -220px;
+}
+.banner .product .soda {
+    background: 
+    var(--url) var(--left) 0,
+    url(./Images/lata.png);
+    background-size: auto 100%;
+    width: 280px;
+    /* height: 400px; */
+    aspect-ratio: 2 / 4;
+    background-blend-mode: multiply;
+    mask-image: url(./Images/lata.png);
+    mask-size: auto 100%;
+    transition: 0.7s;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+.banner .product:hover {
+    --left:-600px;
+    height:300px;
+    transform: translateX(-50%) translateY(-120px);
+}
+
+/*Para agregar la otra lata*/
+.banner .product .soda:nth-child(2) {
+    opacity: 0;
+}
+.banner .product:hover .soda:nth-child(2){
+    opacity: 1;
+}

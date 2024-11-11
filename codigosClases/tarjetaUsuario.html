@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/tarjeta.css">
+</head>
+<body>
+    <div id="cardUsuario"></div>
+   <!--  <div class="cardUs">
+        <div class="ima"><img src="../img/myAvatar.svg" alt="" height="120"></div>
+        <h2>${nombreUsuario}</h2>
+        <p><span>Web designer</span></p>
+        <p>edad: ${edadUsuario}</p>
+        <p>mail: ${emailUsuario}</p>
+        <div class="bt"><button><a href="../index.html">index</a></button></div>
+    </div> -->
+    <script>
+        let cardUser = document.getElementById('cardUsuario');
+let nombreUsuario = prompt('Ingrese su nombre de usuario:');
+let edadUsuario = prompt(`Excelente ${nombreUsuario}\nAhora indicanos que edad tenes:`);
+let emailUsuario = prompt(`Excelente ${nombreUsuario}\nAhora indicanos tu email:`)
+let Gender = prompt(`Indicanos el sexo poniendo opción 1 o 2 siendo:\n1=Masculino\n2=Femenino\n3=No especifica\nEscribí 1 o 2 (📢el número, no las letras📢)`)
+
+if(Gender == '1' && edadUsuario >=18){
+cardUser.innerHTML = `
+<div class="cardUs">
+<div class="ima"><img src="../img/myAvatar.svg" alt="" height="120"></div>
+<h2>${nombreUsuario}</h2>
+<p><span>Web designer</span></p>
+<p>Edad: ${edadUsuario}</p>
+<p>Email: ${emailUsuario}</p>
+<div class="bt"><button><a href="../index.html">index</a></button></div>
+</div>
+`} else if(Gender == '2'&& edadUsuario >=18) {
+    cardUser.innerHTML = `
+<div class="cardUs">
+<div class="ima"><img src="../img/Female.svg" alt="" height="120"></div>
+<h2>${nombreUsuario}</h2>
+<p><span>Web designer</span></p>
+<p>Edad: ${edadUsuario}</p>
+<p>Email: ${emailUsuario}</p>
+<div class="bt"><button><a href="../index.html">index</a></button></div>
+</div>
+`
+}else if(Gender == '3' && edadUsuario >= 18) {
+    cardUser.innerHTML = `
+    <div class="cardUs">
+    <div class="ima"><img src="https://png.pngtree.com/png-vector/20210604/ourlarge/pngtree-gray-avatar-placeholder-png-image_3416697.jpg" alt="" height="120"></div>
+    <h2>${nombreUsuario}</h2>
+    <p><span>Web designer</span></p>
+    <p>Edad: ${edadUsuario}</p>
+    <p>Email: ${emailUsuario}</p>
+    <div class="bt"><button><a href="../index.html">index</a></button></div>
+    </div>
+    `
+}else{
+    alert(`${nombreUsuario} Algunos de los datos son incorrectos o sos menor de edad, volve a cargar la página y coloca los datos de manera correcta.`)
+}
+    </script>
+</body>
+</html>

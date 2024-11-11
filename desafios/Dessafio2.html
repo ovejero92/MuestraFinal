@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Declara variables para almacenar el nombre del producto, su precio unitario y la cantidad deseada
+
+const nombreProducto = "Remeras";
+
+const precioUnitario = 200;
+
+let cantidadDeseada;
+
+
+
+// Utiliza prompt para solicitar al usuario que ingrese la cantidad deseada
+
+cantidadDeseada = parseInt(prompt("Ingrese la cantidad de " + nombreProducto + " que desea comprar:"));
+
+
+
+// Calcula el costo total de la compra multiplicando el precio unitario por la cantidad seleccionada
+
+const costoTotal = precioUnitario * cantidadDeseada;
+
+
+
+// Utiliza alert para informar al usuario sobre el costo total de su compra
+
+alert("Usted compró " + cantidadDeseada + " " + nombreProducto + ". " + "El costo total es: $" + costoTotal);
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!-- <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const usuario = "gus";
+        const contrasenia = "123";
+        let intentos = 0;
+        const maxIntentos = 3; // Límite de intentos permitidos
+        let accesoConcedido = false;
+
+        while (intentos < maxIntentos && !accesoConcedido) {
+            const pedir_usuario = prompt("Ingresa tu usuario:");
+            const pedir_contrasenia = prompt("Ingresa tu contraseña:");
+
+            if (usuario === pedir_usuario && contrasenia === pedir_contrasenia) {
+                accesoConcedido = true;
+                alert("Bienvenido/a a nuestra página");
+            } else {
+                intentos++;
+                alert("¡Usuario o contraseña incorrectos! Intentos restantes: " + (maxIntentos - intentos));
+            }
+        }
+
+        if (!accesoConcedido) {
+            alert("Has superado el número máximo de intentos. Acceso bloqueado.");
+        }
+    </script>
+</body>
+</html> 
+EL MISMO EJEMPLO PERO CON DO 
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const usuario = "gus";
+        const contrasenia = "123";
+        let intentos = 0;
+        const maxIntentos = 3; // Límite de intentos permitidos
+        let accesoConcedido = false;
+
+        // Bucle con do while
+        do {
+            const pedir_usuario = prompt("Ingresa tu usuario:");
+            const pedir_contrasenia = prompt("Ingresa tu contraseña:");
+
+            if (usuario === pedir_usuario && contrasenia === pedir_contrasenia) {
+                accesoConcedido = true;
+                alert("Bienvenido/a a nuestra página");
+            } else {
+                intentos++;
+                if (intentos < maxIntentos) {
+                    alert("¡Usuario o contraseña incorrectos! Intentos restantes: " + (maxIntentos - intentos));
+                }
+            }
+        } while (intentos < maxIntentos && !accesoConcedido);
+
+        if (!accesoConcedido) {
+            alert("Has superado el número máximo de intentos. Acceso bloqueado.");
+        }
+    </script>
+</body>
+</html>
+
+<!-- 
+Diferencia con while:
+En el while, se evalúa la condición antes de ejecutar el código. 
+Si la condición inicial es falsa, el código dentro del bucle nunca se ejecuta. En cambio, el do while asegura que el código se ejecute al menos una vez, 
+incluso si la condición es falsa desde el principio.
+Esto es perfecto para mostrarles cómo se comportan ambos tipos de bucles en casos reales como la autenticación de usuarios.
+-->

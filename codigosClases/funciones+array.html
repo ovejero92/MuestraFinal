@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex justify-center items-center h-screen">
+        <div class="space-x-4">
+            <button onclick="agregarProductos()" class="bg-blue-500 text-white px-6 py-2 rounded-md shadow-md hover:bg-blue-700">Agregar Productos</button>
+            <button onclick="eliminarProducto()" class="bg-red-500 text-white px-6 py-2 rounded-md shadow-md hover:bg-red-700">Eliminar Producto</button>
+            <button onclick="verListado()" class="bg-green-500 text-white px-6 py-2 rounded-md shadow-md hover:bg-green-700">Ver Listado de Productos</button>
+        </div>
+    </div>
+
+    <script>
+        let listaProductos = [];
+
+        function agregarProductos() {
+            let cantidad = parseInt(prompt("¿Cuántos productos deseas agregar?"));
+    
+            for (let i = 0; i < cantidad; i++) {
+                let producto = prompt(`Ingresa el nombre del producto ${i + 1}:`);
+                listaProductos.push(producto); // Agrega el producto al array
+            }
+
+            Swal.fire({
+                icon: 'success',
+                title: 'Productos agregados',
+                text: listaProductos.join(", ")
+            });
+        }
+
+        function eliminarProducto() {
+            let productoAEliminar = prompt("Ingresa el nombre del producto que deseas eliminar:");
+            let index = listaProductos.indexOf(productoAEliminar); // Buscar el índice del producto
+
+            if (index !== -1) {
+                listaProductos.splice(index, 1); // Eliminar el producto si existe
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Producto eliminado',
+                    text: `Producto "${productoAEliminar}" eliminado.`
+                });
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: `El producto "${productoAEliminar}" no existe en la lista.`
+                });
+            }
+        }
+
+        function verListado() {
+            if (listaProductos.length > 0) {
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Listado de productos',
+                    text: listaProductos.join(", /n")
+                });
+            } else {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'No hay productos',
+                    text: 'La lista de productos está vacía.'
+                });
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        h2 {
+            color: red;
+        }
+        button {
+            padding: 16px;
+            border: none;
+            box-shadow: 1px 1px 2px;
+            margin: 3px 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <button onclick="agregarProductos()">Agregar Productos</button>
+    <button onclick="eliminarProducto()">Eliminar producto</button>
+    <button onclick="eliminarProducto()">Ver listado de productos</button>
+    <h2>Listado de productos</h2>
+    <ul id="lista">
+    </ul>
+    <script>
+        let listaProductos = [];
+
+        function actualizarListaHTML() {
+            let lista = document.getElementById("lista");
+            lista.innerHTML = ""; // Limpiar la lista antes de actualizarla
+            for (let i = 0; i < listaProductos.length; i++) {
+                let item = document.createElement("li");
+                item.textContent = listaProductos[i]; // Crear un elemento <li> por cada producto
+                lista.appendChild(item); // Añadir el producto a la lista en el HTML
+            }
+        }
+
+        function agregarProductos() {
+            let cantidad = parseInt(prompt("¿Cuántos productos deseas agregar?"));
+    
+            for (let i = 0; i < cantidad; i++) {
+                let producto = prompt(`Ingresa el nombre del producto ${i + 1}:`);
+                listaProductos.push(producto); // Agrega el producto al array
+            }
+            alert("Productos agregados: " + listaProductos.join(", "));
+            actualizarListaHTML(); // Actualizar la lista en el HTML
+        }
+
+        function eliminarProducto() {
+            let productoAEliminar = prompt("Ingresa el nombre del producto que deseas eliminar:");
+            let index = listaProductos.indexOf(productoAEliminar); // Buscar el índice del producto
+
+            if (index !== -1) {
+                listaProductos.splice(index, 1); // Eliminar el producto si existe
+                alert(`Producto "${productoAEliminar}" eliminado.`);
+            } else {
+                alert(`El producto "${productoAEliminar}" no existe en la lista.`);
+            }
+
+            alert("Productos restantes: " + listaProductos.join(", "));
+            actualizarListaHTML(); // Actualizar la lista en el HTML
+        }
+
+        console.log(listaProductos);
+    </script>
+</body>
+</html> -->

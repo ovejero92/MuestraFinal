@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const productos = [  "Producto 1",
+                    "Producto 2",
+                    "Producto 3",
+                    "Producto 4",
+                    "Producto 5"];
+for (const producto of productos) {
+    let h2 = document.createElement('h2');
+    h2.innerHTML = producto;
+    document.body.appendChild(h2);
+}
+    </script>
+</body>
+</html>

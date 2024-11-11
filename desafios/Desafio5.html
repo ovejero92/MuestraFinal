@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let productos = ["Manzanas","Bananas","Peras", "Naranjas"]
+        // Eliminar el último producto del array (Producto5)
+
+        productos.pop();
+//let productoEliminado = productos.pop();
+
+// mostrar tambien que el pop guarda lo eliminado 
+
+
+// Imprimir en la consola el nuevo stock después de la venta
+
+console.log("Nuevo stock despues de la venta: ");
+
+for (let i = 0; i < productos.length; i++) {
+
+    console.log("Producto " + (i + 1) + ":" + productos[i]);
+    //console.log(`El producto eliminado es : ${productoEliminado}`)
+
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*  EJEMPLO ALUMNO
+        let nombreProducto = "bisuteria"
+     let precioUnitario = "30"
+     let cantidadDeseada = prompt("que cantidad desea comprar?")
+
+     let Precio = precioUnitario * cantidadDeseada
+
+     if (cantidadDeseada >= 5) {
+         let PrecioyDescuento = Precio * 10
+         let Descuento = PrecioyDescuento / 100
+         console.log("a pagar"+ Descuento)
+         alert("por su compra de "+ cantidadDeseada + " " + nombreProducto + "debe abonar:" + Descuento)
+     } else {
+         console.log("a pagar"+ Precio)
+         alert("por su compra de"+ cantidadDeseada + " " + nombreProducto + "debe abonar:" + Precio)
+     }
+        
+        */
+/* EJEMPLO TT
+        // Obtener la información del usuario
+            let nombreProducto = "Remeras";
+            let precioUnitario = 200;
+            let cantidadDeseada = parseInt(prompt("Ingrese la cantidad de " + nombreProducto + " que desea comprar:"));
+        // Calcular el costo total sin descuentos
+            let costoTotalSinDescuentos = precioUnitario * cantidadDeseada;
+        // Aplicar descuento del 10% si la cantidad comprada es mayor o igual a 5
+            if (cantidadDeseada >= 5) {
+                costoTotalSinDescuentos *= 0.9;
+            }
+        // Mostrar el costo total final después de aplicar los descuentos
+            alert("El costo total de " + cantidadDeseada + " " + nombreProducto + " es: $" + costoTotalSinDescuentos);
+*/
+/* EJEMPLO CHJPT*/
+        // Declarar las variables
+let nombreProducto = "Zapatos Deportivos";
+let precioUnitario = 2000;
+
+// Solicitar la cantidad deseada al usuario
+let cantidadDeseada = prompt("¿Cuántos " + nombreProducto + " deseas comprar?");
+
+// Convertir la entrada a número
+cantidadDeseada = parseInt(cantidadDeseada);
+
+// Calcular el costo total sin descuento
+let costoTotal = precioUnitario * cantidadDeseada;
+
+// Aplicar el descuento si la cantidad comprada es mayor o igual a 5
+if (cantidadDeseada >= 5) {
+    let descuento = costoTotal * 0.1; // 10% de descuento
+    costoTotal -= descuento;
+}
+
+// Mostrar el costo total al usuario
+alert("El total a pagar por " + cantidadDeseada + " " + nombreProducto + " es: $" + costoTotal);
+
+    </script>
+</body>
+</html>

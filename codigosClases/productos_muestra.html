@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const misProductosMuestra = [
+    {id:1,nom:"asd",pre:423242,sto:20},
+    {id:2,nom:"sfsf",pre:423242,sto:20},
+    {id:3,nom:"asfsfd",pre:423242,sto:20},
+    {id:4,nom:"asdd",pre:423242,sto:20},
+    {id:5,nom:"asdfsd",pre:423242,sto:20},
+    {id:6,nom:"afsd",pre:423242,sto:20},
+    {id:7,nom:"as1233dfsd",pre:423242,sto:20},
+    {id:8,nom:"asffd",pre:423242,sto:20},
+    {id:9,nom:"asdfs14d",pre:423242,sto:20},
+    {id:10,nom:"as323d",pre:423242,sto:20},
+    {id:11,nom:"asssd12",pre:423242,sto:20},
+    {id:12,nom:"as12etd",pre:423242,sto:20},
+]
+
+misProductosMuestra.forEach( (pro) => {
+    
+    
+    for(let i=0;i < misProductosMuestra.length; i = i + 2 ) {
+        console.log(`${misProductosMuestra[i].nom}`)
+    }
+    for(const producto of misProductosMuestra){
+        console.log(`${producto.nom}`)
+    }
+    console.log(pro)
+})
+
+// El método map crea un nuevo arreglo con los nombres de los productos
+const nombresDeProductos = misProductosMuestra.map( (producto) => producto.nom );
+
+// Mostramos el nuevo arreglo con los nombres
+console.log(nombresDeProductos);
+
+</script>
+</body>
+</html>
